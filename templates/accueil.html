@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block titre %}Acceuil{% endblock titre  %}
+
+{% block content %}
+<h1> Page d'Acceuille</h1>
+
+<h3>Bienvenue sur mon site web</h3>
+<p>C'est la page d'accueil.Bientot, vous verrez les articles ici.</p>
+{% if user.is_authenticated  %}
+<p>Vous etez connecte en tant que <a href="#">{{ user.username}}</a></p>
+{% else %}
+<p> Veillez vous connecter</p>
+
+{% endif %}
+
+{% endblock content  %}
